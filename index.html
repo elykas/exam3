@@ -8,20 +8,23 @@
 </head>
 <body>
     <div id="header-page">
-        <h3>NBA</h3>
+        <h3 id="text-header-page">NBA Fantasy 2014-2024</h3>
     </div>
     <section id="fantasy-team">
         <div id="fantasyTeam-header"><h4 id="fantasyTeam-header-text">My Fantasy Team</h4></div>
-        <div id="pointGuard-card" class="fantasy-player"><h6>Point Guard</h6></div>
-        <div id="shootingGuard-card" class="fantasy-player"><h6>Shooting Guard</h6></div>
-        <div id="smallForward-Card" class="fantasy-player"><h6>Small Forward</h6></div>
-        <div id="powerForward-card" class="fantasy-player"><h6>Power Forward</h6></div>
-        <div id="center-card" class="fantasy-player"><h6>Center</h6></div>
+        <div id="cards-div">
+        <div class="cards" id="pointGuard-card" class="fantasy-player"><h6>Point Guard</h6></div>
+        <div class="cards" id="shootingGuard-card" class="fantasy-player"><h6>Shooting Guard</h6></div>
+        <div class="cards" id="smallForward-Card" class="fantasy-player"><h6>Small Forward</h6></div>
+        <div class="cards" id="powerForward-card" class="fantasy-player"><h6>Power Forward</h6></div>
+        <div class="cards" id="center-card" class="fantasy-player"><h6>Center</h6></div>
+    </div>
     </section>
     <section id="search-section">
-        <h1>NBA Player Search</h1>
-    <form id="filterForm">
-        <select name="position" id="position">
+        <h1 id="header-table">NBA Player Search</h1>
+    <div class="table-form">
+    <form id="filter-form">
+        <select class="search-div" name="position" id="position">
             <option value="">Select Position</option>
             <option value="PG">PG</option>
             <option value="SG">SG</option>
@@ -29,26 +32,35 @@
             <option value="PF">PF</option>
             <option value="C">C</option>
         </select>
-        <input type="range"  id="twoPercent"  min="0" max="100">
-        <input type="range"  id="threePercent"  min="0" max="100">
-        <input type="range"  id="points" min="0" max="20000">
-        <button id="filter-button" type="submit">Search Player</button>
+        <div class="div-range">
+        <span id="twoPercent-label" class="range-label" for="">FG%</span>
+        <input type="range"  id="twoPercent" class="range-div"  min="0" max="100">
+    </div>
+    <div class="div-range">
+        <span id="threePercent-label" class="range-label" for="">3P%</span>
+        <input type="range"  id="threePercent" class="range-div" min="0" max="100">
+    </div>
+    <div class="div-range">
+        <span id="points-label" class="range-label" for="">Points</span>
+        <input type="range"  id="points" min="0" class="range-div" max="20000">
+    </div>
+        <button id="filter-button" class="search-div" type="submit">Search Player</button>
     </form>
 
     <table>
         <thead>
-            <tr>
-                <th>Player</th>
-                <th>Position</th>
-                <th>Points</th>
-                <th>FG%</th>
-                <th>3P%</th>
-                <th>Action</th>
+            <tr class="table-head">
+                <th class="texr-headerTable">Player</th>
+                <th class="texr-headerTable">Position</th>
+                <th class="texr-headerTable">Points</th>
+                <th class="texr-headerTable">FG%</th>
+                <th class="texr-headerTable">3P%</th>
+                <th class="texr-headerTable">Action</th>
             </tr>
         </thead>
         <tbody id="player-table"></tbody>
     </table>
-
+</div>
     </section>
     <script src="app.js"></script>
 </body>
