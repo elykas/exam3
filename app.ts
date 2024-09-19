@@ -46,7 +46,7 @@ interface Players {
   }
 
   const createCard = (div:HTMLDivElement,player:Players) =>{
-
+    
     const nameElement = document.createElement("p");
     nameElement.textContent = player.playerName
     nameElement.classList.add("text-card");
