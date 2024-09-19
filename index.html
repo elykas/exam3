@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header-page">
+        <h3>NBA</h3>
+    </div>
+    <section id="fantasy-team">
+        <div id="fantasyTeam-header"><h4 id="fantasyTeam-header-text">My Fantasy Team</h4></div>
+        <div id="pointGuard-card" class="fantasy-player"><h6>Point Guard</h6></div>
+        <div id="shootingGuard-card" class="fantasy-player"><h6>Shooting Guard</h6></div>
+        <div id="smallForward-Card" class="fantasy-player"><h6>Small Forward</h6></div>
+        <div id="powerForward-card" class="fantasy-player"><h6>Power Forward</h6></div>
+        <div id="center-card" class="fantasy-player"><h6>Center</h6></div>
+    </section>
+    <section id="search-section">
+        <h1>NBA Player Search</h1>
+    <form id="filterForm">
+        <select name="position" id="position">
+            <option value="">Select Position</option>
+            <option value="PG">PG</option>
+            <option value="SG">SG</option>
+            <option value="SF">SF</option>
+            <option value="PF">PF</option>
+            <option value="C">C</option>
+        </select>
+        <input type="range"  id="twoPercent"  min="0" max="100">
+        <input type="range"  id="threePercent"  min="0" max="100">
+        <input type="range"  id="points" min="0" max="20000">
+        <button id="filter-button" type="submit">Search Player</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Position</th>
+                <th>Points</th>
+                <th>FG%</th>
+                <th>3P%</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="player-table"></tbody>
+    </table>
+
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
